@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Variables Concatenate Demo</title>
+</head>
+<body>
+
+  <!-- 
+    Question:
+    Use the variables below to produce the following output:
+    _21_2021_2021_2021_20_
+
+    Restrictions:
+    - You cannot repeat any variable more than once.
+    - You cannot write any numbers directly.
+    - You must use only the values of the variables.
+  -->
+
+  <script>
+    let a = 21;
+    let b = 20;
+
+    // Solution using variables only
+    console.log(`_${a}_${b}${a}_${b}${a}_${b}${a}_${b}_`);
+  </script>
+
+</body>
+</html>
