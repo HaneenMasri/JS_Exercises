@@ -1,0 +1,45 @@
+Question:
+Create two variables named numberOne and numberTwo following correct naming conventions.
+
+numberOne = 10 (Number)
+
+numberTwo = 20 (Number)
+
+Print the result 1020 using normal concatenation.
+
+Print the data type of the result 1020 using normal concatenation.
+
+Print the result 1020 using Template Literals.
+
+Print the data type of the result 1020 using Template Literals.
+
+Print 20 and 10 in two separate lines using normal concatenation (without repeating console.log).
+
+Print 20 and 10 in two separate lines using Template Literals (without repeating console.log).
+
+// Variables
+let numberOne = 10;
+let numberTwo = 20;
+
+// Outputs
+console.log(numberOne + "" + numberTwo);          // Normal Concatenate => 1020
+console.log(typeof (numberOne + "" + numberTwo)); // Normal Concatenate => string
+console.log(`${numberOne}${numberTwo}`);          // Template Literals => 1020
+console.log(typeof `${numberOne}${numberTwo}`);   // Template Literals => string
+
+// Print 20 then 10 using normal concatenate
+console.log(numberTwo + "\n" + numberOne);
+/*
+  Normal Concatenate
+  20
+  10
+*/
+
+// Print 20 then 10 using Template Literals
+console.log(`${numberTwo}
+${numberOne}`);
+/*
+  Template Literals
+  20
+  10
+*/
