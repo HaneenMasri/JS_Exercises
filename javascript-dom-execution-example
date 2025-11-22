@@ -1,0 +1,48 @@
+  <!-- 
+      Question:
+      You have multiple JavaScript code blocks that all try to do the same thing:
+      change the color of an element with id "el" to red. 
+      Write a multiple-line comment explaining which code will NOT work and why.
+    -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+
+    <script>
+      /*
+        Code One:
+        This code will NOT work because it's placed inside the <head>.
+        At this point, the HTML elements in the <body> have not been loaded yet,
+        so document.getElementById("el") returns null.
+      */
+      document.getElementById("el").style.color = "red";
+    </script>
+
+    <script>
+      /*
+        Code Two:
+        This code WILL work because it waits for the entire window to load
+        before trying to access the element with id "el".
+      */
+      window.onload = function () {
+        document.getElementById("el").style.color = "red";
+      };
+    </script>
+  </head>
+
+  <body>
+    <h1 id="el">Page Title</h1>
+
+    <script>
+      /*
+        Code Three:
+        This code WILL work because the script is placed at the end of the <body>,
+        after the element with id "el" has been loaded.
+      */
+      document.getElementById("el").style.color = "red";
+    </script>
+  </body>
+</html>
